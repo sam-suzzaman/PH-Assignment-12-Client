@@ -1,11 +1,12 @@
 import React from "react";
+import BuisnessSummery from "../Components/BuisnessSummery/BuisnessSummery";
 import Hero from "../Components/Hero/Hero";
 
 const Home = () => {
     return (
         <>
             <Hero />
-            <h3>this is home page</h3>
+            <BuisnessSummery />
         </>
     );
 };
