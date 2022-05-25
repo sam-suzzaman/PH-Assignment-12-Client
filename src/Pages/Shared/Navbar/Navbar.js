@@ -35,9 +35,9 @@ const Navbar = () => {
             <div className="navbar-start">
                 <Link
                     to="/"
-                    className="uppercase text-4xl text-neutral font-semibold tracking-wider"
+                    className="uppercase text-xl sm:text-4xl text-neutral font-semibold tracking-wider "
                 >
-                    hello
+                    kit-shop
                 </Link>
             </div>
             <div className="navbar-end">
