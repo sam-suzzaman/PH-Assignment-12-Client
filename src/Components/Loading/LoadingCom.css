@@ -1,0 +1,76 @@
+.tool-loading {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: animation 1s linear infinite;
+    transform: rotate(45deg);
+}
+
+.tool-loading span {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    animation: rotate 1s linear infinite;
+}
+
+.tool-loading span:nth-child(1) {
+    top: 0;
+    left: 0;
+    background-color: #005555;
+}
+.tool-loading span:nth-child(2) {
+    top: 0;
+    right: 0;
+    background-color: #64b6a8;
+}
+.tool-loading span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    background-color: #069a8e;
+}
+.tool-loading span:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    background-color: rgb(69, 69, 69);
+}
+
+@keyframes animation {
+    0% {
+        width: 60px;
+        height: 60px;
+    }
+    10% {
+        width: 60px;
+        height: 60px;
+    }
+    50% {
+        width: 80px;
+        height: 80px;
+    }
+    90% {
+        width: 80px;
+        height: 80px;
+    }
+    100% {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    90% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}

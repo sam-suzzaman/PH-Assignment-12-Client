@@ -4,15 +4,43 @@ import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 import { useForm } from "react-hook-form";
 
+// For Authentication
+import firebaseAuth from "../firebase.init";
+import {
+    useSignInWithEmailAndPassword,
+    useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
+import LoadingCom from "../Components/Loading/LoadingCom";
+
 const Login = () => {
-    // to hanlde error messages
+    const [signInWithGoogle, gUser, gLoading, gError] =
+        useSignInWithGoogle(firebaseAuth);
+    const [signInWithEmailAndPassword, user, loading, error] =
+        useSignInWithEmailAndPassword(firebaseAuth);
+
+    // to hanlde error messages ===
     const {
         register,
         formState: { errors },
         handleSubmit,
     } = useForm();
 
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = (data) => {
+        signInWithEmailAndPassword(data.email, data.password);
+    };
+
+    // =========== Rendering Part ===============
+    if (gLoading || loading) {
+        return <LoadingCom />;
+    }
+    let errorCom;
+    if (gError || error) {
+        errorCom = (
+            <p className="text-center text-sm text-red-600 font-semibold">
+                {error?.message || gError?.message}
+            </p>
+        );
+    }
 
     return (
         <section className="form-wrapper my-10 sm:my-20 px-6">
@@ -21,7 +49,7 @@ const Login = () => {
             </h2>
             {/* form start */}
             <div className="form-container mt-0 sm:mt-14">
-                <div className="card w-full max-w-xl mx-auto shadow-xl py-10 px-8">
+                <div className=" w-full max-w-xl mx-auto kit-shadow py-10 px-8 rounded-lg">
                     <div className="mb-6">
                         <form onSubmit={handleSubmit(onSubmit)}>
                             {/* daisy */}
@@ -107,15 +135,23 @@ const Login = () => {
                                     )}
                                 </label>
                             </div>
+
+                            {/* error message */}
+                            {errorCom}
+
+                            {/* submit button */}
                             <input
-                                className="btn btn-secondary text-base font-medium uppercase text-neutral px-16 cursor-pointer mx-auto block"
+                                className="btn btn-secondary text-base font-medium uppercase text-neutral px-16 cursor-pointer mt-6 mx-auto block"
                                 type="submit"
                             />
                         </form>
                     </div>
                     <div className="divider">OR</div>
                     <div className=" mt-6 flex justify-center">
-                        <button className="btn btn-secondary text-base font-medium uppercase text-neutral sm:px-16">
+                        <button
+                            className="btn btn-secondary text-base font-medium uppercase text-neutral sm:px-16"
+                            onClick={() => signInWithGoogle()}
+                        >
                             <FontAwesomeIcon
                                 icon={faGoogle}
                                 className="text-neutral font-bold w-4 mr-2"
