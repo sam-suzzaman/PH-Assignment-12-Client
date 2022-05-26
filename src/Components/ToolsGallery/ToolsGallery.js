@@ -10,6 +10,7 @@ const ToolsGallery = () => {
             des: "the strongest hammer for your job done",
             minOrderQuantity: 100,
             availableQuantity: 5000,
+            pricePerUnit: 40,
         },
         {
             id: 2,
@@ -18,6 +19,7 @@ const ToolsGallery = () => {
             des: "the strongest hammer for your job done",
             minOrderQuantity: 10,
             availableQuantity: 600,
+            pricePerUnit: 60,
         },
         {
             id: 3,
@@ -26,6 +28,7 @@ const ToolsGallery = () => {
             des: "the strongest hammer for your job done",
             minOrderQuantity: 50,
             availableQuantity: 550,
+            pricePerUnit: 20,
         },
         {
             id: 4,
@@ -34,6 +37,7 @@ const ToolsGallery = () => {
             des: "the strongest hammer for your job done",
             minOrderQuantity: 30,
             availableQuantity: 8800,
+            pricePerUnit: 13,
         },
         {
             id: 5,
@@ -42,6 +46,7 @@ const ToolsGallery = () => {
             des: "the strongest hammer for your job done",
             minOrderQuantity: 50,
             availableQuantity: 2000,
+            pricePerUnit: 38,
         },
     ];
 
