@@ -1,4 +1,6 @@
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Navbar from "./Pages/Shared/Navbar/Navbar";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
@@ -9,6 +11,7 @@ import PurchagePage from "./Pages/PurchagePage";
 import AllTools from "./Pages/AllTools";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
+import ResetPassword from "./Pages/ResetPassword";
 
 function App() {
     return (
@@ -22,9 +25,11 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/resetPassword" element={<ResetPassword />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
+            <ToastContainer />
         </>
     );
 }

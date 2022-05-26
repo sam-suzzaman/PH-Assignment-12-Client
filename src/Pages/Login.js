@@ -11,6 +11,7 @@ import {
     useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import LoadingCom from "../Components/Loading/LoadingCom";
+import { Link } from "react-router-dom";
 
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] =
@@ -48,7 +49,7 @@ const Login = () => {
                 login now
             </h2>
             {/* form start */}
-            <div className="form-container mt-0 sm:mt-14">
+            <div className="form-container mt-8 sm:mt-14">
                 <div className=" w-full max-w-xl mx-auto kit-shadow py-10 px-8 rounded-lg">
                     <div className="mb-6">
                         <form onSubmit={handleSubmit(onSubmit)}>
@@ -141,15 +142,38 @@ const Login = () => {
 
                             {/* submit button */}
                             <input
-                                className="btn btn-secondary text-base font-medium uppercase text-neutral px-16 cursor-pointer mt-6 mx-auto block"
+                                className="btn btn-secondary text-xs sm:text-base font-medium uppercase text-neutral px-6 sm:px-16 cursor-pointer mt-6 mx-auto block"
                                 type="submit"
+                                value="login"
                             />
+
+                            {/* Password reset and new user */}
+                            <p className="text-center mt-4 text-sm font-light ">
+                                <Link
+                                    to="/register"
+                                    className="text-secondary font-semibold hover:text-primary underline decoration-double"
+                                >
+                                    Register Now
+                                </Link>{" "}
+                                <span className="text-gray-500">
+                                    {" "}
+                                    to create an Account
+                                </span>
+                            </p>
+                            <p className="mt-1 text-center">
+                                <Link
+                                    to="/resetPassword"
+                                    className=" text-sm font-semibold text-secondary underline hover:decoration-wavy"
+                                >
+                                    Reset Password
+                                </Link>
+                            </p>
                         </form>
                     </div>
                     <div className="divider">OR</div>
                     <div className=" mt-6 flex justify-center">
                         <button
-                            className="btn btn-secondary text-base font-medium uppercase text-neutral sm:px-16"
+                            className="btn btn-secondary text-xs sm:text-base font-medium uppercase text-neutral  sm:px-16"
                             onClick={() => signInWithGoogle()}
                         >
                             <FontAwesomeIcon

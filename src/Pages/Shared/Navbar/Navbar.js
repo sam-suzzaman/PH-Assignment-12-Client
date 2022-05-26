@@ -1,7 +1,13 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import firebaseAuth from "../../../firebase.init";
+import { useAuthState } from "react-firebase-hooks/auth";
+import LoadingCom from "../../../Components/Loading/LoadingCom";
+import { signOut } from "firebase/auth";
 
 const Navbar = () => {
+    const [user, loading, error] = useAuthState(firebaseAuth);
+
     const menuItems = (
         <>
             <li>
@@ -28,24 +34,45 @@ const Navbar = () => {
                     contact
                 </NavLink>
             </li>
-            <li>
-                <NavLink
-                    to="/login"
-                    className="capitalize font-light text-neutral text-xl"
-                >
-                    log in
-                </NavLink>
-            </li>
-            <li>
-                <NavLink
-                    to="/register"
-                    className="capitalize font-light text-neutral text-xl"
-                >
-                    register
-                </NavLink>
-            </li>
+            {!user && (
+                <>
+                    <li>
+                        <NavLink
+                            to="/login"
+                            className="capitalize font-light text-neutral text-xl"
+                        >
+                            log in
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/register"
+                            className="capitalize font-light text-neutral text-xl"
+                        >
+                            register
+                        </NavLink>
+                    </li>
+                </>
+            )}
+            {user && (
+                <li>
+                    <button
+                        className="btn btn-ghost capitalize font-light text-neutral text-xl"
+                        onClick={() => signOut(firebaseAuth)}
+                    >
+                        {" "}
+                        sign out
+                    </button>
+                </li>
+            )}
         </>
     );
+
+    // ======== Rendering Part ======
+    if (loading) {
+        return <LoadingCom />;
+    }
+
     return (
         <div className="navbar bg-secondary lg:px-16 px-6">
             <div className="navbar-start">
