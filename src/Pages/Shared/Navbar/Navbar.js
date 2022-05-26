@@ -20,6 +20,14 @@ const Navbar = () => {
             </li>
             <li>
                 <NavLink
+                    to="/order"
+                    className="capitalize font-light text-neutral text-xl"
+                >
+                    purchase
+                </NavLink>
+            </li>
+            <li>
+                <NavLink
                     to="/about"
                     className="capitalize font-light text-neutral text-xl"
                 >
@@ -103,7 +111,7 @@ const Navbar = () => {
                     </label>
                     <ul
                         tabIndex="0"
-                        className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 bg-secondary"
+                        className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 bg-secondary"
                     >
                         {menuItems}
                     </ul>

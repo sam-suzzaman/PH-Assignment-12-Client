@@ -12,6 +12,8 @@ import AllTools from "./Pages/AllTools";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import ResetPassword from "./Pages/ResetPassword";
+import RequireAuth from "./Pages/Shared/RequireAuth/RequireAuth";
+import Purchase from "./Pages/Purchase";
 
 function App() {
     return (
@@ -26,6 +28,14 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/resetPassword" element={<ResetPassword />} />
+                <Route
+                    path="/order"
+                    element={
+                        <RequireAuth>
+                            <Purchase />
+                        </RequireAuth>
+                    }
+                />
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
