@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import tooPic from "../../assets/tool.jpg";
 import SingleTool from "../SingleTool/SingleTool";
 const ToolsGallery = () => {
@@ -61,6 +62,11 @@ const ToolsGallery = () => {
                         return <SingleTool key={tool.id} tool={tool} />;
                     })}
                 </div>
+            </div>
+            <div className="w-full flex justify-center mt-10">
+                <Link to="/allTools" className="btn btn-primary px-8 sm:px-16">
+                    Show all tools
+                </Link>
             </div>
         </section>
     );

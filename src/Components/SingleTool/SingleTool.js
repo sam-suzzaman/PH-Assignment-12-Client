@@ -49,7 +49,7 @@ const SingleTool = ({ tool }) => {
                 </p>
                 <div className="card-actions justify-end mt-8">
                     <Link
-                        to="/singleProduct"
+                        to="/purchage"
                         className="btn btn-primary btn-outline xl:btn-wide px-8 xl:px-0 mx-auto "
                     >
                         <svg
