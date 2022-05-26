@@ -28,6 +28,22 @@ const Navbar = () => {
                     contact
                 </NavLink>
             </li>
+            <li>
+                <NavLink
+                    to="/login"
+                    className="capitalize font-light text-neutral text-xl"
+                >
+                    log in
+                </NavLink>
+            </li>
+            <li>
+                <NavLink
+                    to="/register"
+                    className="capitalize font-light text-neutral text-xl"
+                >
+                    register
+                </NavLink>
+            </li>
         </>
     );
     return (
