@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const SingleTool = ({ tool }) => {
     const {
+        _id,
         photo,
         title,
         des,
@@ -49,7 +50,7 @@ const SingleTool = ({ tool }) => {
                 </p>
                 <div className="card-actions justify-end mt-8">
                     <Link
-                        to="/purchage"
+                        to={`/order/${_id}`}
                         className="btn btn-primary btn-outline xl:btn-wide px-8 xl:px-0 mx-auto "
                     >
                         <svg

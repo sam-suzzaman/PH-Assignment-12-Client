@@ -29,7 +29,7 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/resetPassword" element={<ResetPassword />} />
                 <Route
-                    path="/order"
+                    path="/order/:orderId"
                     element={
                         <RequireAuth>
                             <Purchase />

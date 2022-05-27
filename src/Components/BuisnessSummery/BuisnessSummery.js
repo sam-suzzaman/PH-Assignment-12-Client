@@ -36,7 +36,7 @@ const BuisnessSummery = () => {
                         <div className="mx-auto pb-4">
                             <FontAwesomeIcon
                                 icon={faUsers}
-                                className="text-secondary font-bold w-16"
+                                className="text-secondary font-bold w-16 h-16"
                             />
                         </div>
                         <div className="stat-title text-primary font-semibold text-lg uppercase">
@@ -52,7 +52,7 @@ const BuisnessSummery = () => {
                         <div className="mx-auto pb-4">
                             <FontAwesomeIcon
                                 icon={faMedal}
-                                className="text-secondary font-bold w-14"
+                                className="text-secondary font-bold w-16 h-16"
                             />
                         </div>
                         <div className="stat-title text-primary font-semibold text-lg uppercase">
@@ -68,7 +68,7 @@ const BuisnessSummery = () => {
                         <div className="mx-auto pb-4">
                             <FontAwesomeIcon
                                 icon={faLocationDot}
-                                className="text-secondary font-bold w-9"
+                                className="text-secondary font-bold w-16 h-16"
                             />
                         </div>
                         <div className="stat-title text-primary font-semibold uppercase text-lg">
