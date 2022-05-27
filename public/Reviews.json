@@ -1,0 +1,50 @@
+[
+    {
+        "title": "customer name 1",
+        "reviewText": "Wish I'd purchased these one, but very pleased with my purchase. I use it a lot.",
+        "photo": "https://i.ibb.co/4WpRTwF/avater.jpg",
+        "rating": 4.5
+    },
+    {
+        "title": "customer name 2",
+        "reviewText": "It's holds my phone safely and the remote works, but that's all that does. The plug was not made for Australia which is ridiculous since it's sold in Australia. So after finding another one in the house the light doesn't work!! Not worth it!!",
+        "photo": "https://i.ibb.co/4WpRTwF/avater.jpg",
+        "rating": 4
+    },
+    {
+        "title": "customer name 3",
+        "reviewText": "It is a good size and provides ample light, unlike smaller units. Happy with the purchase.",
+        "photo": "https://i.ibb.co/4WpRTwF/avater.jpg",
+        "rating": 5
+    },
+    {
+        "title": "customer name 4",
+        "reviewText": "very high quality product. The light stand was so heavy and high quality build. lamp socket is very fresh and nice. overall very very good and quality product.",
+        "photo": "https://i.ibb.co/4WpRTwF/avater.jpg",
+        "rating": 3.7
+    },
+    {
+        "title": "customer name 5",
+        "reviewText": "Good product. Packaging was safe and everything was okay.Thanks seller.",
+        "photo": "https://i.ibb.co/4WpRTwF/avater.jpg",
+        "rating": 4.3
+    },
+    {
+        "title": "customer name 6",
+        "reviewText": "very high quality watch, it looks more beautiful face to face....  the date & week are working well... but it is a big & heavy watch, so not recommended for people with narrow/not wide wrist.",
+        "photo": "https://i.ibb.co/4WpRTwF/avater.jpg",
+        "rating": 3.9
+    },
+    {
+        "title": "customer name 7",
+        "reviewText": "Light was great.Same as picture. Packaging was also great.Recommended.Thanks a lot",
+        "photo": "https://i.ibb.co/4WpRTwF/avater.jpg",
+        "rating": 4.7
+    },
+    {
+        "title": "customer name 8",
+        "reviewText": "OMG! I am satisfied with the item and I recommended to every one out there to have it! I really feel like a star when I sit infront of my mirror.",
+        "photo": "https://i.ibb.co/4WpRTwF/avater.jpg",
+        "rating": 5
+    }
+]

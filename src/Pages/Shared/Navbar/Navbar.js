@@ -70,16 +70,29 @@ const Navbar = () => {
                     </li>
                 </>
             )}
+        </>
+    );
+
+    const userInfo = (
+        <>
             {user && (
-                <li>
+                <p className="flex items-center">
+                    <img
+                        className="w-8 h-8 rounded-full mr-1"
+                        src={user?.photoURL}
+                        alt="avatar"
+                    />
+                    <span className="text-base-100 mr-2">
+                        {user?.displayName}
+                    </span>
                     <button
-                        className="btn btn-ghost capitalize font-light text-neutral text-xl"
+                        className=" btn btn-primary capitalize font-light text-neutral text-base bg-primary rounded-md"
                         onClick={() => signOut(firebaseAuth)}
                     >
                         {" "}
                         sign out
                     </button>
-                </li>
+                </p>
             )}
         </>
     );
@@ -119,14 +132,16 @@ const Navbar = () => {
                     </label>
                     <ul
                         tabIndex="0"
-                        className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 bg-secondary"
+                        className="menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-60 bg-secondary"
                     >
                         {menuItems}
+                        {userInfo}
                     </ul>
                 </div>
                 {/* large menu */}
                 <ul className="menu menu-horizontal p-0 hidden lg:flex">
                     {menuItems}
+                    {userInfo}
                 </ul>
             </div>
         </div>
