@@ -26,20 +26,20 @@ const Navbar = () => {
                     blog
                 </NavLink>
             </li>
-            <li>
+            {/* <li>
                 <NavLink
                     to="/order"
                     className="capitalize font-light text-neutral text-xl"
                 >
                     purchase
                 </NavLink>
-            </li>
+            </li> */}
             <li>
                 <NavLink
-                    to="/about"
+                    to="/portfolio"
                     className="capitalize font-light text-neutral text-xl"
                 >
-                    about
+                    portfolio
                 </NavLink>
             </li>
             <li>

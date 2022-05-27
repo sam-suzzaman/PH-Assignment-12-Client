@@ -1,0 +1,20 @@
+[
+    {
+        "_id": 1,
+        "name": "Electro Vally",
+        "des": "Comming Soon ...",
+        "siteLink": "https://assignment11-electronics-house.web.app/"
+    },
+    {
+        "_id": 2,
+        "name": "Easy Learning",
+        "des": "Comming Soon ...",
+        "siteLink": "https://a10-e-learning.web.app/"
+    },
+    {
+        "_id": 3,
+        "name": "Books Shop",
+        "des": "Comming Soon ...",
+        "siteLink": "https://inspiring-kangaroo-3d5a95.netlify.app/"
+    }
+]
