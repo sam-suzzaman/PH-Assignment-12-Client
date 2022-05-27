@@ -75,7 +75,7 @@ const BuisnessSummery = () => {
                             Receiving point
                         </div>
                         <div className="stat-value text-primary">100+</div>
-                        <div className="stat-desc">↘︎ 90 (14%)</div>
+                        {/* <div className="stat-desc">↘︎ 90 (14%)</div> */}
                     </div>
                 </div>
             </div>

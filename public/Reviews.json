@@ -1,50 +1,58 @@
 [
     {
-        "title": "customer name 1",
-        "reviewText": "Wish I'd purchased these one, but very pleased with my purchase. I use it a lot.",
-        "photo": "https://i.ibb.co/4WpRTwF/avater.jpg",
-        "rating": 4.5
+        "photo": "https://i.ibb.co/9ymQV3T/dril.jpg",
+        "title": "Drill Machine - I",
+        "des": "the strongest hammer for your job done",
+        "minOrderQuantity": 100,
+        "availableQuantity": 5000,
+        "pricePerUnit": 3000
     },
     {
-        "title": "customer name 2",
-        "reviewText": "It's holds my phone safely and the remote works, but that's all that does. The plug was not made for Australia which is ridiculous since it's sold in Australia. So after finding another one in the house the light doesn't work!! Not worth it!!",
-        "photo": "https://i.ibb.co/4WpRTwF/avater.jpg",
-        "rating": 4
+        "photo": "https://i.ibb.co/7vc9tHr/dril2.jpg",
+        "title": "Drill Machine - II",
+        "des": "The more powerfull Drill Machine for your job done",
+        "minOrderQuantity": 100,
+        "availableQuantity": 3000,
+        "pricePerUnit": 2050
     },
     {
-        "title": "customer name 3",
-        "reviewText": "It is a good size and provides ample light, unlike smaller units. Happy with the purchase.",
-        "photo": "https://i.ibb.co/4WpRTwF/avater.jpg",
-        "rating": 5
+        "photo": "https://i.ibb.co/hfxb4yw/hammer.jpg",
+        "title": "Hammer with wood handle",
+        "des": "Stylish and flexible hammer and first choise for any house",
+        "minOrderQuantity": 300,
+        "availableQuantity": 7000,
+        "pricePerUnit": 300
     },
     {
-        "title": "customer name 4",
-        "reviewText": "very high quality product. The light stand was so heavy and high quality build. lamp socket is very fresh and nice. overall very very good and quality product.",
-        "photo": "https://i.ibb.co/4WpRTwF/avater.jpg",
-        "rating": 3.7
+        "photo": "https://i.ibb.co/ZBBbN0L/paint-Brush.jpg",
+        "title": "A full set of Paint Brush",
+        "des": "The best brush for smooth painting.",
+        "minOrderQuantity": 500,
+        "availableQuantity": 9000,
+        "pricePerUnit": 200
     },
     {
-        "title": "customer name 5",
-        "reviewText": "Good product. Packaging was safe and everything was okay.Thanks seller.",
-        "photo": "https://i.ibb.co/4WpRTwF/avater.jpg",
-        "rating": 4.3
+        "photo": "https://i.ibb.co/P9n4WkG/paint-Brush2.jpg",
+        "title": "Paint Brush - II",
+        "des": "The best brush for smooth painting of your house hold walls.",
+        "minOrderQuantity": 300,
+        "availableQuantity": 4000,
+        "pricePerUnit": 350
     },
     {
-        "title": "customer name 6",
-        "reviewText": "very high quality watch, it looks more beautiful face to face....  the date & week are working well... but it is a big & heavy watch, so not recommended for people with narrow/not wide wrist.",
-        "photo": "https://i.ibb.co/4WpRTwF/avater.jpg",
-        "rating": 3.9
+        "photo": "https://i.ibb.co/hcLDknY/screwdriver2.jpg",
+        "title": "Screw Driver - I",
+        "des": "Best Screw Driver with comfortable rubber handle",
+        "minOrderQuantity": 450,
+        "availableQuantity": 4000,
+        "pricePerUnit": 240
     },
     {
-        "title": "customer name 7",
-        "reviewText": "Light was great.Same as picture. Packaging was also great.Recommended.Thanks a lot",
-        "photo": "https://i.ibb.co/4WpRTwF/avater.jpg",
-        "rating": 4.7
-    },
-    {
-        "title": "customer name 8",
-        "reviewText": "OMG! I am satisfied with the item and I recommended to every one out there to have it! I really feel like a star when I sit infront of my mirror.",
-        "photo": "https://i.ibb.co/4WpRTwF/avater.jpg",
-        "rating": 5
+        "photo": "https://i.ibb.co/hcLDknY/screwdriver2.jpg",
+        "title": "Feet Tape",
+        "des": "The most important thing to calculate length and width.",
+        "minOrderQuantity": 500,
+        "availableQuantity": 10000,
+        "pricePerUnit": 40
     }
 ]

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import useFetch from "../../Hooks/useFetch";
 import SingleTool from "../SingleTool/SingleTool";
 const ToolsGallery = () => {
-    const tools = useFetch("http://localhost:5000/tools");
+    const tools = useFetch("http://localhost:5000/toolsLimit");
 
     return (
         <section className="tools-gallery-container py-8 px-8 lg:px-16">

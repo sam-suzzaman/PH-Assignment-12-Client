@@ -1,5 +1,4 @@
 import React from "react";
-import userPhoto from "../../assets/avater.jpg";
 import Review from "../Review/Review";
 import Slider from "react-slick";
 import { useQuery } from "react-query";
@@ -9,72 +8,7 @@ const Reviews = () => {
     const { data: reviews, isLoading } = useQuery("reviews", () =>
         fetch("http://localhost:5000/reviews").then((res) => res.json())
     );
-    // const reviews = [
-    //     {
-    //         id: 1,
-    //         title: "customer name 1",
-    //         reviewText:
-    //             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid aliquam delectus dolorem error officiis saepe dignissimos, esse odit facere asperiores",
-    //         photo: userPhoto,
-    //         rating: 4.5,
-    //     },
-    //     {
-    //         id: 2,
-    //         title: "customer name 2",
-    //         reviewText:
-    //             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid aliquam delectus dolorem error officiis saepe dignissimos, esse odit facere asperiores",
-    //         photo: userPhoto,
-    //         rating: 4,
-    //     },
-    //     {
-    //         id: 3,
-    //         title: "customer name 3",
-    //         reviewText:
-    //             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid aliquam delectus dolorem error officiis saepe dignissimos, esse odit facere asperiores",
-    //         photo: userPhoto,
-    //         rating: 5,
-    //     },
-    //     {
-    //         id: 4,
-    //         title: "customer name 4",
-    //         reviewText:
-    //             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid aliquam delectus dolorem error officiis saepe dignissimos, esse odit facere asperiores",
-    //         photo: userPhoto,
-    //         rating: 5,
-    //     },
-    //     {
-    //         id: 5,
-    //         title: "customer name 5",
-    //         reviewText:
-    //             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid aliquam delectus dolorem error officiis saepe dignissimos, esse odit facere asperiores",
-    //         photo: userPhoto,
-    //         rating: 5,
-    //     },
-    //     {
-    //         id: 6,
-    //         title: "customer name 6",
-    //         reviewText:
-    //             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid aliquam delectus dolorem error officiis saepe dignissimos, esse odit facere asperiores",
-    //         photo: userPhoto,
-    //         rating: 5,
-    //     },
-    //     {
-    //         id: 7,
-    //         title: "customer name 7",
-    //         reviewText:
-    //             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid aliquam delectus dolorem error officiis saepe dignissimos, esse odit facere asperiores",
-    //         photo: userPhoto,
-    //         rating: 5,
-    //     },
-    //     {
-    //         id: 8,
-    //         title: "customer name 8",
-    //         reviewText:
-    //             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid aliquam delectus dolorem error officiis saepe dignissimos, esse odit facere asperiores",
-    //         photo: userPhoto,
-    //         rating: 5,
-    //     },
-    // ];
+
     // for slider =====
     const settings = {
         dots: false,
