@@ -1,0 +1,22 @@
+[
+    {
+        "_id": "1",
+        "question": "How will you improve the performance of a React Application?",
+        "answer": "React Applicaiton এ Performance Optimizing এর জন্য বেশ কিছু smart technique ব্যবহার করে। এর পাশাপাশি আরও কিছু উপায় রয়েছে যার মাধ্যমে React Application এর Performance Improve করা যায়। যেমনঃ React Application কে build করা, Profiling Components with DevTools Profiler, Virtualize long lists, Avoid Reconciliation, keeping component state local, stop unnecessary re-renders,lazy loading images in React. এই techniques গুলোর মাধ্যমে React Application এর performance improve করা যায়। "
+    },
+    {
+        "_id": "2",
+        "question": " What are the different ways to manage a state in a React application?",
+        "answer": "React এ State manage করার কাজটা বেশ ভালোই জটিল। React এ সাধারণত ৪ ধরনের state দেখা যায়। যথাঃ Local State, Global State, Server State, URL State. এই  ৪ ধরনের স্টেটকে আলাদা আলাদা ভাবে Manage করা হয়। যেমনঃ Local State হলো One or another component এর ভিতর যে state share হয়, এর জন্য সাধারণত useState hook ব্যবহার হয়। এরপরে, Global State হলো ঐ State যা Multiple Components এর ভিতর share হয়, একে handle করার জন্য useReducer or useContext ব্যবহার হয়। এরপরে আছে Server State যেই State যা External server থেকে আসে এবং UI এর সাথে connected, এর জন্য বিভিন্ন popular React Data Fetching Libraries রয়েছে যেমন React Query SWR etc. সবশেষ, URL state হলো ঐ সকল ডাটার state যেগুলো URL এ থাকে যেমন pathname, query parameters etc, এই state কে  useParams hook use করে সহজেই  manage করা যায়।"
+    },
+    {
+        "_id": "3",
+        "question": " How does prototypical inheritance work?",
+        "answer": "Prototypical Inheritance হলো javaScript এর একটা Feature যেইটা Object এ method and properties যুক্ত করতে ব্যবহার হয়। এর মাধ্যমে একটা অবজেক্ট অন্য অব্জেক্ট এর properties & methods কে access করতে পারে। এটা একটা চেইনের মতো। এই চেইনের টপ লেভেলে থাকে Object.prototype এর সাথে অন্য যে যে অবজেক্ট কানেক্ট থাকবে তারা সবাই একে অপরের methods & properties কে access করতে পারে। এক্ষেত্রে কোন method or property কে যখন access করা হবে তখন সে প্রথমে ঐ অবজেক্টের ভিতরে তার reference কে খুজবে। সেখানে না পেলে তার উপর লেভেলে চেক করবে। এভাবে স্টেপ বাই স্টেপ check করবে এবং Finally Object.prototype এ যাবে এবং সেখান থেকে অন্য অবজেক্টের properties or methods কে access করতে পারবে। "
+    },
+    {
+        "_id": "4",
+        "question": "What is a unit test? Why should write unit tests?",
+        "answer": "UNIT TESTING হল এক ধরনের সফটওয়্যার টেস্টিং যেখানে একটি সফটওয়্যারের পৃথক Unit or Component কে পরীক্ষা করা হয়। Unit Testing করার মুল উদ্দেশ্য হলো, এটা দেখা যে প্রত্যেকটা code unit or component ঠিকমতো কাজ করছে কি না। এখানে Unit হতে পারে a funciton or a method or a module or an object এটা মুলত development phase এ করা হয়ে থাকে। এই Unit testing করার জন্য কিছু code লেখা লাগে যার মাধ্যমে testing করা হয়। তবে এর জন্য বেশ কিছু জনপ্রিয় Unit Testing Framework ও আছে যেগুলো দিয়ে এই টেস্টিং এর কাজ করা যায়। Unit Testing করার মাধ্যমে  easily bugs fix করা যায়। সাথে এটি ডেভেলপারদের টেস্টিং কোড বেস বুঝতে সাহায্য করে। একটা ভালো Unit Test কে Project Documentation হিসেবেও ব্যবহার করা হয়। "
+    }
+]

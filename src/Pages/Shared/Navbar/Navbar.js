@@ -20,6 +20,14 @@ const Navbar = () => {
             </li>
             <li>
                 <NavLink
+                    to="/blog"
+                    className="capitalize font-light text-neutral text-xl"
+                >
+                    blog
+                </NavLink>
+            </li>
+            <li>
+                <NavLink
                     to="/order"
                     className="capitalize font-light text-neutral text-xl"
                 >

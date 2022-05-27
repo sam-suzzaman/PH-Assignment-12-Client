@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 // === For Form
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 import firebaseAuth from "../firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
 import LoadingCom from "../Components/Loading/LoadingCom";
-import { Link } from "react-router-dom";
+import UpdateOrderQuantity from "../Components/UpdateOrderQuantity/UpdateOrderQuantity";
 
 const Purchase = () => {
     const [user, loading] = useAuthState(firebaseAuth);
@@ -24,7 +22,7 @@ const Purchase = () => {
     } = useForm();
 
     const onSubmit = async (data) => {
-        toast("UserName update successfully");
+        toast("Thanks for Purchasing");
     };
 
     const {
@@ -101,6 +99,7 @@ const Purchase = () => {
                             </span>{" "}
                             (per Unit)
                         </p>
+                        <UpdateOrderQuantity />
                     </div>
                 </div>
             </div>
@@ -127,34 +126,7 @@ const Purchase = () => {
                                         value={user?.displayName}
                                         readOnly
                                         className="input input-bordered w-full"
-                                        {...register("name", {
-                                            required: {
-                                                value: true,
-                                                message: "Name is required",
-                                            },
-                                            // pattern: {
-                                            //     value: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/,
-                                            //     message: "enter a valid email",
-                                            // },
-                                            minLength: {
-                                                value: 5,
-                                                message:
-                                                    "Name must have 5 characters",
-                                            },
-                                        })}
                                     />
-                                    <label className="label">
-                                        {errors.name?.type === "required" && (
-                                            <span className="label-text-alt text-red-600">
-                                                {errors?.name.message}
-                                            </span>
-                                        )}
-                                        {errors.name?.type === "minLength" && (
-                                            <span className="label-text-alt text-red-600">
-                                                {errors?.name.message}
-                                            </span>
-                                        )}
-                                    </label>
                                 </div>
 
                                 {/* Email Field */}
@@ -169,29 +141,7 @@ const Purchase = () => {
                                         value={user?.email}
                                         readOnly
                                         className="input input-bordered w-full"
-                                        {...register("email", {
-                                            required: {
-                                                value: true,
-                                                message: "Email is required",
-                                            },
-                                            pattern: {
-                                                value: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/,
-                                                message: "enter a valid email",
-                                            },
-                                        })}
                                     />
-                                    <label className="label">
-                                        {errors.email?.type === "required" && (
-                                            <span className="label-text-alt text-red-600">
-                                                {errors.email.message}
-                                            </span>
-                                        )}
-                                        {errors.email?.type === "pattern" && (
-                                            <span className="label-text-alt text-red-600">
-                                                {errors.email.message}
-                                            </span>
-                                        )}
-                                    </label>
                                 </div>
 
                                 {/* Address Field */}
