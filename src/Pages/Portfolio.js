@@ -1,12 +1,14 @@
 import React from "react";
 import profilePic from "../assets/profile.png";
 import PortfolioProject from "../Components/PorfolioProject/PortfolioProject";
+import Skill from "../Components/PortfolioSkill/Skill";
 // import { faHandPointRight } from "@fortawesome/free-solid-svg-icons";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import useFetch from "../Hooks/useFetch";
 
 const Portfolio = () => {
-    const projectsData = useFetch("Projects.json");
+    const projectsData = useFetch("http://localhost:5000/portfolioProject");
+    const skillData = useFetch("http://localhost:5000/portfolioSkill");
 
     return (
         <section className="portfolio-container">
@@ -77,149 +79,9 @@ const Portfolio = () => {
                 {/* all skills */}
                 <div className="mt-4 sm:mt-8 flex flex-col  items-center ">
                     <div className="flex flex-col w-full max-w-xl justify-center items-center ">
-                        {/* Item-1 */}
-                        <div className="w-full px-8 mt-4">
-                            <div className="flex justify-between mb-1">
-                                <span className="text-secondary font-medium uppercase ">
-                                    html
-                                </span>
-                                <span className="text-sm font-medium text-primary">
-                                    95%
-                                </span>
-                            </div>
-                            <div className="w-full  rounded-full h-2.5 bg-gray-700">
-                                <div
-                                    className="bg-secondary h-2.5 rounded-full"
-                                    style={{ width: "95%" }}
-                                ></div>
-                            </div>
-                        </div>
-
-                        {/* Item-2 */}
-                        <div className="w-full px-8 mt-4">
-                            <div className="flex justify-between mb-1">
-                                <span className="text-secondary font-medium uppercase ">
-                                    css
-                                </span>
-                                <span className="text-sm font-medium text-primary">
-                                    85%
-                                </span>
-                            </div>
-                            <div className="w-full  rounded-full h-2.5 bg-gray-700">
-                                <div
-                                    className="bg-secondary h-2.5 rounded-full"
-                                    style={{ width: "85%" }}
-                                ></div>
-                            </div>
-                        </div>
-
-                        {/* Item-3 */}
-                        <div className="w-full px-8 mt-4">
-                            <div className="flex justify-between mb-1">
-                                <span className="text-secondary font-medium uppercase ">
-                                    javascript
-                                </span>
-                                <span className="text-sm font-medium text-primary">
-                                    80%
-                                </span>
-                            </div>
-                            <div className="w-full  rounded-full h-2.5 bg-gray-700">
-                                <div
-                                    className="bg-secondary h-2.5 rounded-full"
-                                    style={{ width: "80%" }}
-                                ></div>
-                            </div>
-                        </div>
-
-                        {/* Item-4 */}
-                        <div className="w-full px-8 mt-4">
-                            <div className="flex justify-between mb-1">
-                                <span className="text-secondary font-medium uppercase ">
-                                    Bootstrap
-                                </span>
-                                <span className="text-sm font-medium text-primary">
-                                    90%
-                                </span>
-                            </div>
-                            <div className="w-full  rounded-full h-2.5 bg-gray-700">
-                                <div
-                                    className="bg-secondary h-2.5 rounded-full"
-                                    style={{ width: "90%" }}
-                                ></div>
-                            </div>
-                        </div>
-
-                        {/* Item-5 */}
-                        <div className="w-full px-8 mt-4">
-                            <div className="flex justify-between mb-1">
-                                <span className="text-secondary font-medium uppercase ">
-                                    React
-                                </span>
-                                <span className="text-sm font-medium text-primary">
-                                    80%
-                                </span>
-                            </div>
-                            <div className="w-full  rounded-full h-2.5 bg-gray-700">
-                                <div
-                                    className="bg-secondary h-2.5 rounded-full"
-                                    style={{ width: "80%" }}
-                                ></div>
-                            </div>
-                        </div>
-
-                        {/* Item-6 */}
-                        <div className="w-full px-8 mt-4">
-                            <div className="flex justify-between mb-1">
-                                <span className="text-secondary font-medium uppercase ">
-                                    Express
-                                </span>
-                                <span className="text-sm font-medium text-primary">
-                                    20%
-                                </span>
-                            </div>
-                            <div className="w-full  rounded-full h-2.5 bg-gray-700">
-                                <div
-                                    className="bg-secondary h-2.5 rounded-full"
-                                    style={{ width: "20%" }}
-                                ></div>
-                            </div>
-                        </div>
-
-                        {/* Item-7 */}
-                        <div className="w-full px-8 mt-4">
-                            <div className="flex justify-between mb-1">
-                                <span className="text-secondary font-medium uppercase ">
-                                    mongd DB
-                                </span>
-                                <span className="text-sm font-medium text-primary">
-                                    30%
-                                </span>
-                            </div>
-                            <div className="w-full  rounded-full h-2.5 bg-gray-700">
-                                <div
-                                    className="bg-secondary h-2.5 rounded-full"
-                                    style={{ width: "30%" }}
-                                ></div>
-                            </div>
-                        </div>
-
-                        {/* Item-8 */}
-                        <div className="w-full px-8 mt-4">
-                            <div className="flex justify-between mb-1">
-                                <span className="text-secondary font-medium uppercase ">
-                                    github
-                                </span>
-                                <span className="text-sm font-medium text-primary">
-                                    70%
-                                </span>
-                            </div>
-                            <div className="w-full  rounded-full h-2.5 bg-gray-700">
-                                <div
-                                    className="bg-secondary h-2.5 rounded-full"
-                                    style={{ width: "70%" }}
-                                ></div>
-                            </div>
-                        </div>
+                        {skillData.map((skill) => (
+                            <Skill key={skill._id} skill={skill} />
+                        ))}
                     </div>
                 </div>
             </div>

@@ -53,7 +53,7 @@ const Reviews = () => {
             <div className=" px-8 lg:px-16 mt-10">
                 <Slider {...settings}>
                     {reviews?.map((review) => {
-                        return <Review key={review.id} review={review} />;
+                        return <Review key={review._id} review={review} />;
                     })}
                 </Slider>
             </div>

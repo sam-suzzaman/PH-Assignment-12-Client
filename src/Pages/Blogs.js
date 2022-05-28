@@ -3,7 +3,7 @@ import Blog from "../Components/Blog/Blog";
 import useFetch from "../Hooks/useFetch";
 
 const Blogs = () => {
-    const blogsData = useFetch("Blogs.json");
+    const blogsData = useFetch("http://localhost:5000/blogs");
     return (
         <section className="blogs-wrapper">
             {/* hero section */}
