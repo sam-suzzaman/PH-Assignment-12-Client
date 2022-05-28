@@ -14,6 +14,10 @@ import RequireAuth from "./Pages/Shared/RequireAuth/RequireAuth";
 import Purchase from "./Pages/Purchase";
 import Blogs from "./Pages/Blogs";
 import Portfolio from "./Pages/Portfolio";
+import Dashboard from "./Pages/Dashboard";
+import MyOrder from "./Pages/MyOrder";
+import AddReviews from "./Pages/AddReviews";
+import MyProfile from "./Pages/MyProfile";
 
 function App() {
     return (
@@ -36,6 +40,18 @@ function App() {
                         </RequireAuth>
                     }
                 />
+                <Route
+                    path="/dashboard"
+                    element={
+                        <RequireAuth>
+                            <Dashboard />
+                        </RequireAuth>
+                    }
+                >
+                    <Route index element={<MyOrder />} />
+                    <Route path="addReview" element={<AddReviews />} />
+                    <Route path="myProfile" element={<MyProfile />} />
+                </Route>
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />

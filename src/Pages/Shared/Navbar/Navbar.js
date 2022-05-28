@@ -18,6 +18,16 @@ const Navbar = () => {
                     home
                 </NavLink>
             </li>
+            {user && (
+                <li>
+                    <NavLink
+                        to="/dashboard"
+                        className="capitalize font-light text-neutral text-xl"
+                    >
+                        dashboard
+                    </NavLink>
+                </li>
+            )}
             <li>
                 <NavLink
                     to="/blog"

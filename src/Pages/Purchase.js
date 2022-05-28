@@ -99,7 +99,10 @@ const Purchase = () => {
                             </span>{" "}
                             (per Unit)
                         </p>
-                        <UpdateOrderQuantity />
+                        <UpdateOrderQuantity
+                            availableQuantity={availableQuantity}
+                            minOrderQuantity={minOrderQuantity}
+                        />
                     </div>
                 </div>
             </div>
