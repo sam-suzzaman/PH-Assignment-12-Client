@@ -4,6 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import firebaseAuth from "../firebase.init";
 import Loading from "../Components/Loading/LoadingCom";
 import { toast } from "react-toastify";
+import ConfirmModal from "../Components/ConfirmModal/ConfirmModal";
 
 const MyOrder = () => {
     const [user, loading] = useAuthState(firebaseAuth);
@@ -21,24 +22,29 @@ const MyOrder = () => {
             .catch((err) => console.log(err));
     }, [user]);
 
+    // const handleCancelProceed = (btnName) => {
+    //     if (btnName === "YES") {
+    //         return true;
+    //     } else if (btnName === "NO") {
+    //         return false;
+    //     }
+    // };
+
     // === cancel button handler ===
     const hanldeOrderCancel = (ID) => {
-        const proceed = window.confirm("Are You Sure? ");
-        if (proceed) {
-            const url = `http://localhost:5000/myorders/${ID}`;
-            fetch(url, {
-                method: "DELETE",
+        const url = `http://localhost:5000/myorders/${ID}`;
+        fetch(url, {
+            method: "DELETE",
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                const remaining = orders.filter(
+                    (order) => order.orderID !== ID
+                );
+                setOrders(remaining);
+                toast("Item Deleted Successfully");
             })
-                .then((res) => res.json())
-                .then((data) => {
-                    const remaining = orders.filter(
-                        (order) => order.orderID !== ID
-                    );
-                    setOrders(remaining);
-                    toast("Item Deleted Successfully");
-                })
-                .catch((err) => console.log(err));
-        }
+            .catch((err) => console.log(err));
     };
 
     // ==== Rendering ======
@@ -79,6 +85,7 @@ const MyOrder = () => {
                     </table>
                 </div>
             </div>
+            {/* modal */}
         </div>
     );
 };
