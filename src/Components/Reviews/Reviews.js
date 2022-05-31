@@ -6,7 +6,9 @@ import LoadingCom from "../Loading/LoadingCom";
 
 const Reviews = () => {
     const { data: reviews, isLoading } = useQuery("reviews", () =>
-        fetch("http://localhost:5000/reviews").then((res) => res.json())
+        fetch("https://tranquil-bayou-59353.herokuapp.com/reviews").then(
+            (res) => res.json()
+        )
     );
 
     // for slider =====

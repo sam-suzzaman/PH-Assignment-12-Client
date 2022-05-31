@@ -1,62 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
 
 const UpdateOrderQuantity = ({ availableQuantity, minOrderQuantity }) => {
-    const [quantity, setQuantity] = useState(minOrderQuantity);
-    // const {
-    //     register,
-    //     formState: { errors },
-    //     handleSubmit,
-    // } = useForm();
-
-    // const onSubmit = async (data) => {
-    //     //toast("Thanks for Purchasing");
-    //     console.log(data);
-    // };
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("submit");
-    };
-
-    const handleIncreaseQuantity = () => {
-        let increasedQuantity = quantity + 1;
-        setQuantity(increasedQuantity);
-    };
-    const handleDecreaseQuantity = () => {
-        let decreasedQuantity = quantity - 1;
-        setQuantity(decreasedQuantity);
-    };
-
     return (
-        <div className="w-full bg-accent p-4 mt-10 rounded-lg">
-            <div className="flex flex-col sm:flex-row">
-                <form onSubmit={handleSubmit}>
-                    <input
-                        type="number"
-                        className="input input-bordered w-full my-4 sm:my-0 sm:mx-4 text-center"
-                        value={quantity}
-                        onChange={(e) => setQuantity(e.target.value)}
-                    />
-                    <button
-                        className="btn btn-primary text-neutral mx-8 sm:mx-0 mt-4 sm:mt-0 sm:ml-3"
-                        type="submit"
-                    >
-                        submit
-                    </button>
-                </form>
-                <button
-                    onClick={handleIncreaseQuantity}
-                    className="btn btn-primary text-neutral mx-8 sm:mx-0"
-                >
-                    Increase
+        <div className="w-full kit-shadow  p-4 mt-10 rounded-lg flex justify-center">
+            <div className="flex flex-col sm:flex-row ">
+                <button className="btn btn-sm bg-secondary hover:bg-secondary hover:text-neutral border-none text-base-100 font-light">
+                    increase
                 </button>
-
-                <button
-                    onClick={handleDecreaseQuantity}
-                    className="btn btn-primary text-neutral mx-8 sm:mx-0"
-                >
-                    Decrease
+                <input
+                    type="text"
+                    className="input input-sm input-bordered w-28 sm:mx-2 mx-0 my-2 sm:my-0 text-center text-sm"
+                />
+                <button className="btn btn-sm bg-secondary hover:bg-secondary hover:text-neutral border-none text-base-100 font-light">
+                    decrease
                 </button>
             </div>
         </div>

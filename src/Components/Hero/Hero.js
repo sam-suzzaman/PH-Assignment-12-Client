@@ -3,7 +3,7 @@ import useFetch from "../../Hooks/useFetch";
 import heroBG from "../../assets/heroBG.jpg";
 
 const Hero = () => {
-    // const data = useFetch("http://localhost:5000/hero");
+    // const data = useFetch("https://tranquil-bayou-59353.herokuapp.com/hero");
 
     return (
         <div

@@ -3,7 +3,9 @@ import Blog from "../Components/Blog/Blog";
 import useFetch from "../Hooks/useFetch";
 
 const Blogs = () => {
-    const blogsData = useFetch("http://localhost:5000/blogs");
+    const blogsData = useFetch(
+        "https://tranquil-bayou-59353.herokuapp.com/blogs"
+    );
     return (
         <section className="blogs-wrapper">
             {/* hero section */}

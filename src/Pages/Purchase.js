@@ -35,7 +35,7 @@ const Purchase = () => {
         pricePerUnit,
     } = tool;
     useEffect(() => {
-        const url = `http://localhost:5000/tools/${orderId}`;
+        const url = `https://tranquil-bayou-59353.herokuapp.com/tools/${orderId}`;
         fetch(url)
             .then((res) => res.json())
             .then((result) => {
@@ -59,7 +59,7 @@ const Purchase = () => {
                 <div className="hero-content flex-col lg:flex-row">
                     <img
                         src={photo}
-                        className="max-w-sm w-full rounded-lg shadow-2xl"
+                        className=" lg:mr-8 max-w-sm w-full rounded-lg shadow-2xl"
                         alt="tool"
                     />
                     <div>

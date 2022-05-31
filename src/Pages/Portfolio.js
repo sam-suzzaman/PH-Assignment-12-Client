@@ -7,8 +7,12 @@ import Skill from "../Components/PortfolioSkill/Skill";
 import useFetch from "../Hooks/useFetch";
 
 const Portfolio = () => {
-    const projectsData = useFetch("http://localhost:5000/portfolioProject");
-    const skillData = useFetch("http://localhost:5000/portfolioSkill");
+    const projectsData = useFetch(
+        "https://tranquil-bayou-59353.herokuapp.com/portfolioProject"
+    );
+    const skillData = useFetch(
+        "https://tranquil-bayou-59353.herokuapp.com/portfolioSkill"
+    );
 
     return (
         <section className="portfolio-container">
