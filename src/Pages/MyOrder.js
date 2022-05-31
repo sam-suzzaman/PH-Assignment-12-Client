@@ -3,12 +3,13 @@ import MyOrderList from "../Components/MyOrderList/MyOrderList";
 import { useAuthState } from "react-firebase-hooks/auth";
 import firebaseAuth from "../firebase.init";
 import Loading from "../Components/Loading/LoadingCom";
+import { toast } from "react-toastify";
 
 const MyOrder = () => {
     const [user, loading] = useAuthState(firebaseAuth);
     const [orders, setOrders] = useState([]);
 
-    // for Orders
+    // for loading Orders
     useEffect(() => {
         const userEmail = user?.email;
         const url = `http://localhost:5000/myorders?email=${userEmail}`;
@@ -19,6 +20,26 @@ const MyOrder = () => {
             })
             .catch((err) => console.log(err));
     }, [user]);
+
+    // === cancel button handler ===
+    const hanldeOrderCancel = (ID) => {
+        const proceed = window.confirm("Are You Sure? ");
+        if (proceed) {
+            const url = `http://localhost:5000/myorders/${ID}`;
+            fetch(url, {
+                method: "DELETE",
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    const remaining = orders.filter(
+                        (order) => order.orderID !== ID
+                    );
+                    setOrders(remaining);
+                    toast("Item Deleted Successfully");
+                })
+                .catch((err) => console.log(err));
+        }
+    };
 
     // ==== Rendering ======
     if (loading) {
@@ -50,6 +71,7 @@ const MyOrder = () => {
                                         order={order}
                                         key={order._id}
                                         indexValue={index}
+                                        hanldeOrderCancel={hanldeOrderCancel}
                                     />
                                 );
                             })}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const MyOrderList = ({ order, indexValue }) => {
+const MyOrderList = ({ order, indexValue, hanldeOrderCancel }) => {
     const {
         _id,
         orderID,
@@ -13,6 +13,7 @@ const MyOrderList = ({ order, indexValue }) => {
         phoneNumber,
         orderQuantity,
     } = order;
+
     return (
         <tr>
             <th className="text-center">{indexValue + 1}</th>
@@ -41,7 +42,10 @@ const MyOrderList = ({ order, indexValue }) => {
                 <button className="btn btn-secondary btn-xs text-neutral font-semibold mr-2">
                     payment
                 </button>
-                <button className="btn btn-error btn-xs text-base-100 font-semibold">
+                <button
+                    className="btn btn-error btn-xs text-base-100 font-semibold"
+                    onClick={() => hanldeOrderCancel(orderID)}
+                >
                     cancel
                 </button>
             </th>
