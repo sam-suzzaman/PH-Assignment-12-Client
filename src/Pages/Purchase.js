@@ -14,6 +14,16 @@ const Purchase = () => {
     const { orderId } = useParams();
     const [tool, setTool] = useState({});
 
+    useEffect(() => {
+        const url = `https://tranquil-bayou-59353.herokuapp.com/tools/${orderId}`;
+        fetch(url)
+            .then((res) => res.json())
+            .then((result) => {
+                setTool(result);
+            })
+            .catch((err) => console.log(err.message));
+    }, [orderId, tool]);
+
     // to hanlde error messages ===
     const {
         register,
@@ -34,15 +44,6 @@ const Purchase = () => {
         photo,
         pricePerUnit,
     } = tool;
-    useEffect(() => {
-        const url = `https://tranquil-bayou-59353.herokuapp.com/tools/${orderId}`;
-        fetch(url)
-            .then((res) => res.json())
-            .then((result) => {
-                setTool(result);
-            })
-            .catch((err) => console.log(err.message));
-    }, [orderId]);
 
     // =========== Rendering Part ===============
     // if (user) {
@@ -99,10 +100,7 @@ const Purchase = () => {
                             </span>{" "}
                             (per Unit)
                         </p>
-                        <UpdateOrderQuantity
-                            availableQuantity={availableQuantity}
-                            minOrderQuantity={minOrderQuantity}
-                        />
+                        <UpdateOrderQuantity tool={tool} />
                     </div>
                 </div>
             </div>
@@ -126,8 +124,8 @@ const Purchase = () => {
                                     </label>
                                     <input
                                         type="name"
-                                        value={user?.displayName}
                                         readOnly
+                                        value={user?.displayName}
                                         className="input input-bordered w-full"
                                     />
                                 </div>
