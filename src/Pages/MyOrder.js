@@ -13,7 +13,7 @@ const MyOrder = () => {
     // for loading Orders
     useEffect(() => {
         const userEmail = user?.email;
-        const url = `http://localhost:5000/myorders?email=${userEmail}`;
+        const url = `https://tranquil-bayou-59353.herokuapp.com/myorders?email=${userEmail}`;
         fetch(url)
             .then((res) => res.json())
             .then((result) => {
@@ -24,7 +24,7 @@ const MyOrder = () => {
 
     // === cancel button handler ===
     const hanldeOrderCancel = (ID) => {
-        const url = `http://localhost:5000/myorders/${ID}`;
+        const url = `https://tranquil-bayou-59353.herokuapp.com/myorders/${ID}`;
         fetch(url, {
             method: "DELETE",
         })

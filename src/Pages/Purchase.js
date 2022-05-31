@@ -58,7 +58,7 @@ const Purchase = () => {
             orderQuantity,
         };
 
-        const url = `http://localhost:5000/order`;
+        const url = `https://tranquil-bayou-59353.herokuapp.com/order`;
         fetch(url, {
             method: "POST",
             headers: {

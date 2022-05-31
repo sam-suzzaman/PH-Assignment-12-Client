@@ -26,7 +26,7 @@ const AddReviews = () => {
         };
 
         // sending ===
-        fetch("http://localhost:5000/addReview", {
+        fetch("https://tranquil-bayou-59353.herokuapp.com/addReview", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

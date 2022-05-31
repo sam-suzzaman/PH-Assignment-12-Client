@@ -21,7 +21,7 @@ const UpdateOrderQuantity = ({ tool }) => {
         if (orderQuantity) {
             const newQuantity = orderQuantity + 1;
             const newTool = { orderQuantity: newQuantity, ...restTool };
-            const url = `http://localhost:5000/order/${_id}`;
+            const url = `https://tranquil-bayou-59353.herokuapp.com/order/${_id}`;
             fetch(url, {
                 method: "PUT",
                 headers: {
@@ -40,7 +40,7 @@ const UpdateOrderQuantity = ({ tool }) => {
         if (orderQuantity) {
             const newQuantity = orderQuantity - 1;
             const newTool = { orderQuantity: newQuantity, ...restTool };
-            const url = `http://localhost:5000/order/${_id}`;
+            const url = `https://tranquil-bayou-59353.herokuapp.com/order/${_id}`;
             fetch(url, {
                 method: "PUT",
                 headers: {
