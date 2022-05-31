@@ -54,6 +54,10 @@ const MyOrderList = ({ order, indexValue, hanldeOrderCancel }) => {
                     </label>
                 </th>
             </tr>
+            <ConfirmModal
+                hanldeOrderCancel={hanldeOrderCancel}
+                orderID={orderID}
+            />
         </>
     );
 };

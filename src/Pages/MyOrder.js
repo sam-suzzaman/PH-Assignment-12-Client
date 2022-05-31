@@ -20,15 +20,7 @@ const MyOrder = () => {
                 setOrders(result);
             })
             .catch((err) => console.log(err));
-    }, [user]);
-
-    // const handleCancelProceed = (btnName) => {
-    //     if (btnName === "YES") {
-    //         return true;
-    //     } else if (btnName === "NO") {
-    //         return false;
-    //     }
-    // };
+    }, [user, orders]);
 
     // === cancel button handler ===
     const hanldeOrderCancel = (ID) => {
@@ -38,11 +30,12 @@ const MyOrder = () => {
         })
             .then((res) => res.json())
             .then((data) => {
-                const remaining = orders.filter(
-                    (order) => order.orderID !== ID
-                );
-                setOrders(remaining);
-                toast("Item Deleted Successfully");
+                // const remaining = orders.filter(
+                //     (order) => order.orderID !== ID
+                // );
+                // setOrders(remaining);
+                // toast("Item Deleted Successfully");
+                console.log(data);
             })
             .catch((err) => console.log(err));
     };
