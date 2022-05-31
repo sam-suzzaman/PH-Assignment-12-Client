@@ -24,17 +24,6 @@ const Purchase = () => {
             .catch((err) => console.log(err.message));
     }, [orderId, tool]);
 
-    // to hanlde error messages ===
-    const {
-        register,
-        formState: { errors },
-        handleSubmit,
-    } = useForm();
-
-    const onSubmit = async (data) => {
-        toast("Thanks for Purchasing");
-    };
-
     const {
         _id,
         des,
@@ -43,7 +32,45 @@ const Purchase = () => {
         minOrderQuantity,
         photo,
         pricePerUnit,
+        orderQuantity,
     } = tool;
+
+    // to hanlde error messages ===
+    const {
+        register,
+        formState: { errors },
+        handleSubmit,
+    } = useForm();
+
+    const onSubmit = async (data) => {
+        const { displayName, email } = user;
+        const { address, phoneNumber } = data;
+        // order object
+        const order = {
+            orderID: _id,
+            orderTitle: title,
+            orderPhoto: photo,
+            orderPricePerUnit: pricePerUnit,
+            orderOwner: displayName,
+            orderEmail: email,
+            address,
+            phoneNumber,
+            orderQuantity,
+        };
+
+        const url = `http://localhost:5000/order`;
+        fetch(url, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(order),
+        })
+            .then((res) => res.json())
+            .then((result) => {
+                toast("Order Placed Successfully");
+            });
+    };
 
     // =========== Rendering Part ===============
     // if (user) {
@@ -243,6 +270,21 @@ const Purchase = () => {
                                             </span>
                                         )}
                                     </label>
+                                </div>
+
+                                {/* Order Field */}
+                                <div className="form-control w-full">
+                                    <label className="label">
+                                        <span className="label-text capitalize">
+                                            Order Quantity:
+                                        </span>
+                                    </label>
+                                    <input
+                                        type="number"
+                                        readOnly
+                                        value={orderQuantity}
+                                        className="input input-bordered w-full"
+                                    />
                                 </div>
 
                                 {/* submit button */}
